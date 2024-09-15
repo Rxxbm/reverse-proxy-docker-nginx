@@ -7,3 +7,12 @@ services:
       - "3001:3001"
     volumes:
       - ./product_api:/home/node/app
+
+  auth_api:
+    build: ./auth_api
+    environment:
+      - PORT=3002
+    ports:
+      - "3002:3002"
+    volumes:
+      - ./auth_api:/home/node/app
