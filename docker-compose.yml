@@ -16,3 +16,12 @@ services:
       - "3002:3002"
     volumes:
       - ./auth_api:/home/node/app
+
+  order_api:
+    build: ./order_api
+    environment:
+      - PORT=3003
+    ports:
+      - "3003:3003"
+    volumes:
+      - ./order_api:/home/node/app
