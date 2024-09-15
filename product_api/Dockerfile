@@ -2,10 +2,10 @@ FROM node:18.3.0-slim
 
 WORKDIR /home/node/app
 
+COPY package*.json tsconfig.json ./
+
+RUN npm install
+
 USER node
 
-COPY . .
-
-EXPOSE 3000
-
-CMD ["tail", "-f", "/dev/null"]
+CMD ["npm", "start"]

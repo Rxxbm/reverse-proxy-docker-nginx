@@ -16,7 +16,7 @@ const server = createServer((req: IncomingMessage, res: ServerResponse) => {
 });
 
 // Definir a porta e iniciar o servidor
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
-  console.log(`Server is listening on port ${PORT}`);
+  console.log(`Server is listening on port ${process.env.PORT}`);
 });

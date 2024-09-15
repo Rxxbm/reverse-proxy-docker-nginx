@@ -1,7 +1,9 @@
 services:
   product_api:
     build: ./product_api
+    environment:
+      - PORT=3001
     ports:
-      - "3001:3000"
+      - "3001:3001"
     volumes:
       - ./product_api:/home/node/app
