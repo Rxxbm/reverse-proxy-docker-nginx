@@ -5,7 +5,7 @@ const server = createServer((req: IncomingMessage, res: ServerResponse) => {
   res.setHeader("Content-Type", "application/json");
 
   // Roteamento simples baseado no método e na URL
-  if (req.method === "GET" && req.url === "/products") {
+  if (req.method === "GET" && req.url === "/auth") {
     res.writeHead(200);
     res.end(JSON.stringify({ message: "Auth api" }));
   } else {
