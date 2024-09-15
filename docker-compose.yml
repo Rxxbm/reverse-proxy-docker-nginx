@@ -1,0 +1,7 @@
+services:
+  product_api:
+    build: ./product_api
+    ports:
+      - "3001:3000"
+    volumes:
+      - ./product_api:/home/node/app
